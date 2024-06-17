@@ -7,7 +7,7 @@
 //Bucket Configurations
 
  var bucketName = "rokutest";
- var bucketRegion = "s3.us-east-2";
+ var bucketRegion = "us-east-2";
  var IdentityPoolId = "Testing";
 
  AWS.config.update({
@@ -43,8 +43,8 @@
                 {
                     var file = files[0];
                     var fileName = file.name;
-                    var filePath = 'my-first-bucket-path/' + fileName;
-                    var fileUrl = 'https://' + BUCKET_REGION + '.amazonaws.com/my-first-bucket/' +  filePath;
+                    var filePath = fileName;
+                    var fileUrl = 'https://rokutest.s3.us-east-2.amazonaws.com/' +  filePath;
             
                     s3.upload({
                                     Key: filePath,
